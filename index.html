@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portafolio</title>
+    <link rel="icon" href="icon logo.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header>
+        <video muted autoplay loop>
+            <source src="video de portafolio.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>
+        
+        <!-- Barra de navegación -->
+        <nav>
+            <!-- Logo de la página -->
+            <div class="logo">
+                <img src="website portafolio.png" alt="logo" width="120">
+            </div>
+
+            <!-- Icono de hamburguesa (3 líneas) -->
+            <div class="menu-icon" id="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Menú de navegación -->
+            <ul class="nav-links">
+                <li><a href="index.html" target="_self">Home</a></li>
+                <li><a href="work.html" target="_self">My Work</a></li>
+                <li><a href="about me.html" target="_self">About me</a></li>
+                <li><a href="mailto:montsem1230@gmail.com">Contact Me</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Imagen de proyecto 1 con hover -->
+    <div class="image-container">
+        <a href="Projects/project 1/project1.html">
+            <img src="capa lingumaster 2.png" alt="Detalles del Proyecto">
+            <span class="hover-text">DESING APP LINGUMASTER</span>
+        </a>
+    </div>
+
+
+    <!-- Imagen de proyecto 2 con hover -->
+    <div class="image-container">
+        <a href="Projects/project 2/project2.html">
+            <img src="capa ipl events.png" alt="Detalles del Proyecto">
+            <span class="hover-text">DESING APP FOR EVENTES IPL</span>
+        </a>
+    </div>
+
+    
+    <!-- Formulario de contacto -->
+    
+    <h2 class="contact-title">Contact Me</h2>
+ <form id="contactForm" action="https://formsubmit.co/montsem1230@gmail.com" method="POST">
+  <!-- Configuración para FormSubmit -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_redirect" value="false">
+
+  <!-- Campos de usuario -->
+  <input type="text" id="name" name="name" placeholder="Name" required>
+  <input type="email" id="email" name="email" placeholder="Email" required>
+  <textarea name="message" placeholder="Your message" required></textarea>
+  <button type="submit">Send</button>
+ </form>
+
+ <p id="respuesta"></p>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        
+        <p>Copyright 2025</p>
+    </footer>
+
+    <!-- Script para activar el menú hamburguesa -->
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active'); // Cambiar la clase "active" para mostrar/ocultar el menú
+        });
+    </script>
+
+
+    <!-- Script formulario de contacto -->
+ <script>
+  const form = document.getElementById("contactForm");
+  const respuesta = document.getElementById("respuesta");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        respuesta.textContent = "¡Mensaje enviado con éxito!";
+        respuesta.style.color = "#f838ef";
+        form.reset();
+      } else {
+        respuesta.textContent = "Error al enviar el mensaje. Intenta más tarde.";
+        respuesta.style.color = "red";
+      }
+    } catch (error) {
+      respuesta.textContent = "Error de conexión. Verifica tu red.";
+      respuesta.style.color = "red";
+    }
+  });
+ </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

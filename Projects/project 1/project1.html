@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="icon" href="icon logo.ico">
+    <link rel="stylesheet" href="project1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav>
+        <!-- Logo de la página -->
+        <div class="logo">
+            <img src="website portafolio.png" alt="logo" width="120">
+        </div>
+
+        <!-- Icono de hamburguesa (3 líneas) -->
+        <div class="menu-icon" id="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+      <!-- Menú de navegación -->
+      <ul class="nav-links">
+        <li><a href="../../index.html" target="_self">Home</a></li>
+        <li><a href="../../work.html" target="_self">My Work</a></li>
+        <li><a href="../../about me.html" target="_self">About me</a></li>
+        <li><a href="mailto:montsem1230@gmail.com">Contact Me</a></li> 
+    </ul>
+    </nav>
+
+
+ <!-- Imagen de proyecto -->
+ <div class="image-container">
+    
+    <img src="capa lingumaster.png" alt="Detalles del Proyecto">
+          
+ </div>
+
+
+
+ <!-- Section Descripción del proyecto -->
+
+ <section class="project-description">
+    <div class="content-wrapper">
+      <div class="description-text">
+        <h2>PROJECT OBJETIVE</h2>
+        <p>The objective of this project was to design an application interface from scratch that solves a problem. This app was created to facilitate learning a new language in an accessible, interactive, and personalized way, allowing users to develop effective communication skills anytime, anywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="video-container">
+    <h3 class="video-title">INTERACTIVE PROTOTYPE</h3>
+    <video controls autoplay muted loop>
+      <source src="video app.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  
+  <section class="gallery-section">
+    <h3 class="gallery-title">FINAL SCREENS</h3>
+  
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="Page principal.png" alt="Page Principal">
+        <p class="gallery-description">Page Principal</p>
+      </div>
+  
+      <div class="gallery-item">
+        <img src="Activities.png" alt="Home page">
+        <p class="gallery-description">Home Page</p>
+      </div>
+  
+      <div class="gallery-item">
+        <img src="My courses.png" alt="Section My Courses">
+        <p class="gallery-description">Section My Courses</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Section listening.png" alt="listening Section">
+        <p class="gallery-description">Section Listening</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Listening 3.png" alt="Activity Listening">
+        <p class="gallery-description">Listening Activity</p>
+      </div>
+  
+      <div class="gallery-item">
+        <img src="Listening.png" alt="Activity Achievement">
+        <p class="gallery-description">Activity Achievement</p>
+      </div>
+    </div>
+
+
+  </section>
+  
+   
+
+
+
+ <!-- Footer -->
+ <footer>
+    <a href="mailto:montsem1230@gmail.com">Email contact</a>
+    <p>Copyright 2025</p>
+</footer>
+
+<!-- Script para activar el menú hamburguesa -->
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active'); // Cambiar la clase "active" para mostrar/ocultar el menú
+    });
+</script>
+
+</body>
+</html>
