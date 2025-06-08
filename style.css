@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 
 /* General reset */
 * {
@@ -13,7 +16,59 @@ body, html {
     background-color: #000000;
 }
 
-/* Video como fondo */
+
+#banner 
+{
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index:1;
+  width: 100%;
+  height: 100%;
+  font-size: 5rem;
+  font-weight:medium;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#hellos_container 
+{
+  display: inline-block;
+}
+
+#hellos 
+{
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  width: 0px;
+  border-right: 0.5rem solid rgb(255, 255, 255);
+  overflow: hidden;
+  line-height: 7rem;
+  white-space: nowrap;
+  animation: 
+    typing 1s steps(20, end) forwards, 
+    blink 0.6s infinite;
+}
+
+@keyframes typing 
+{
+  from { width: 0% }
+  to { width: 100% }
+}
+
+
+@keyframes blink 
+{
+  from { border-color: transparent }
+  
+}
+
+/* Vídeo como fundo */
 header {
     position: relative;
     height: 100vh;
@@ -39,7 +94,7 @@ header video {
     height: 100%;
 }
 
-/* Barra de navegación */
+/* Barra de navegação */
 nav {
     position: fixed;
     z-index: 2;
@@ -51,7 +106,7 @@ nav {
     width: 100%;
 }
 
-/* Logo */
+/* Logotipo */
 nav .logo a {
     font-size: 1.5rem;
     font-weight: bold;
@@ -59,7 +114,7 @@ nav .logo a {
     text-decoration: none;
 }
 
-/* Menú principal */
+/* Menu principal */
 nav ul {
     list-style: none;
     display: flex;
@@ -80,7 +135,7 @@ nav a:hover {
 }
 
 
-/* Estilo para el icono de hamburguesa */
+/* Estilo para o ícone do hambúrguer */
 .menu-icon {
     display: none;
     cursor: pointer;
@@ -117,7 +172,7 @@ nav a:hover {
     display: block;
 }
 
-/* Superposición de color al hacer hover */
+/* Sobreposição de cores ao passar o rato */
 .image-container a::after {
     content: "";
     position: absolute;
@@ -131,24 +186,24 @@ nav a:hover {
 }
 
 .image-container a:hover::after {
-    background: linear-gradient(#000000a9, #9600A2); /* color visible al hacer hover */
+    background: linear-gradient(#000000a9, #9600A2); /* cor visível ao passar o rato */
 }
 
-/* Texto que aparece sobre la imagen */
+/* Texto que aparece na imagem */
 .hover-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* texto centrado */
+    transform: translate(-50%, -50%); 
     color: white;
     font-size: 2rem;
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 2; /* por encima de la capa morada */
+    z-index: 2; 
 }
 
-/* Mostrar el texto al hacer hover */
+/* Mostrar texto ao passar o rato */
 .image-container a:hover .hover-text {
     opacity:1;
 }
@@ -243,14 +298,14 @@ footer a {
     text-decoration: none;
 }
 
-/* Media Queries para menú tipo hamburguesa */
+/* Media Queries */
 @media (max-width: 768px) {
-    /* Icono hamburguesa oculto */
+    /* Ícone de hambúrguer escondido */
     .menu-icon {
         display: flex;
     }
 
-    /* Menú oculto en pantallas pequeñas */
+    /* Menu oculto em ecrãs pequenos */
     .nav-links {
         display: none;
         width: 100%;
@@ -258,18 +313,18 @@ footer a {
         gap: 20px;
         text-align: center;
         position: absolute;
-        top: 70px; /* Ajuste dependiendo de la altura del header */
+        top: 70px; /* Ajuste em função da altura do cabeçalho */
         left: 0;
         background-color: rgba(0, 0, 0, 0.8);
         padding: 20px;
     }
 
-    /* Mostrar el menú cuando el icono hamburguesa se active */
+    /* Mostrar menu quando o ícone de hambúrguer está ativado */
     .nav-links.active {
         display: flex;
     }
 
-    /* Cambiar de color del fondo al hacer hover */
+    /* Alterar cor de fundo ao passar o rato */
     .nav-links a:hover {
         color: #ffccff;
     }
@@ -286,14 +341,83 @@ footer a {
 
 
 
-    /* Reducción del tamaño de la imagen en pantallas pequeñas */
+    /* Reduzir o tamanho da imagem em ecrãs pequenos */
     .image-container {
         height: 30vh; 
     }
 
     .image-container img {
-        object-fit: contain; /* imagen ajustada al contenedor */
+        object-fit: contain; 
     }
+
+    #banner {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  font-size: 5rem;
+  font-weight: 500; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#hellos_container {
+  display: inline-block;
+}
+
+#hellos {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  width: 0px;
+  border-right: 0.5rem solid rgb(255, 255, 255);
+  overflow: hidden;
+  line-height: 7rem;
+  white-space: nowrap;
+  animation: 
+    typing 1s steps(20, end) forwards, 
+    blink 0.6s infinite;
+}
+
+@keyframes typing {
+  from { width: 0% }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from { border-color: transparent }
+  to { border-color: white }
+}
+
+/* Consultas de media para ecrãs menores */
+
+@media (max-width: 768px) {
+  #banner {
+    font-size: 1rem;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  #hellos {
+    line-height: 4rem;
+    border-right: 0.3rem solid rgb(255, 255, 255);
+  }
+}
+
+@media (max-width: 480px) {
+  #banner {
+    font-size: 1.5rem;
+  }
+  #hellos {
+    line-height: 3rem;
+    border-right: 0.2rem solid rgb(255, 255, 255);
+  }
+}
 
     
 }

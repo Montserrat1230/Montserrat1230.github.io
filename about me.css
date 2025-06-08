@@ -63,30 +63,68 @@ nav a:hover {
     background-color: black;
     padding: 40px;
     border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 150px auto;
-    gap: 40px;
-}
-
-.profile {
-    flex: 1 1 300px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 60px;
 }
 
+/* ========== Columna Izquierda ========== */
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Foto de perfil */
 .profile-img {
-    width: 250px;
-    height: 250px;
+    width: 420px;
+    height: 420px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #FF00C8;
+    box-shadow: 0 4px 15px rgba(255, 3, 217, 0.5);
 }
 
-.info {
-    flex: 2 1 500px;
+/* Softwares */
+.softwares h3 {
+    color: #FF00C8;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Lenguajes */
+.languages h3 {
+    color: #FF00C8;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.languages ul {
+    list-style: none;
+    padding: 0;
+    color: white;
+    font-size: 1.1rem;
+    text-align: left;
+    line-height: 2em;
+}
+
+/* ========== Columna Derecha ========== */
+.right-column {
+    flex: 2;
 }
 
 h1 {
@@ -99,39 +137,29 @@ h1 {
     margin-bottom: 20px;
     font-size: 1.3rem;
     line-height: 1.9rem;
+    color: white;
 }
 
-.softwares, .education, .contact, .languages {
-    margin-top: 30px;
+/* Educación y Contacto */
+.education, .contact {
+    margin-top: 40px;
 }
 
-.softwares h3, .education h3, .contact h3, .languages h3 {
+.education h3, .contact h3 {
     color: #FF00C8;
     margin-bottom: 15px;
 }
 
-.icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.icons img {
-    width: 50px;
-    height: 50px;
-}
-
-.education ul, .contact ul, .languages ul {
+.education ul, .contact ul {
     list-style: none;
     padding: 0;
 }
 
-.education li, .contact li, .languages li {
+.education li, .contact li {
     margin-bottom: 10px;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
-
 
 
 /* Footer */
@@ -148,36 +176,60 @@ footer a {
     text-decoration: none;
 }
 
+/* Estilo para el icono de hamburguesa */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
+   /* Icono hamburguesa oculto */
     .menu-icon {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .nav-links.active {
         display: flex;
     }
 
-    .about-me {
+    /* Menú oculto en pantallas pequeñas */
+    .nav-links {
+        display: none;
+        width: 100%;
         flex-direction: column;
+        gap: 20px;
         text-align: center;
+        position: absolute;
+        top: 70px; /* Ajuste dependiendo de la altura del header */
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 20px;
     }
 
+    /* Mostrar el menú cuando el icono hamburguesa se active */
+    .nav-links.active {
+        display: flex;
+    }
+ 
+    .about-me {
+        flex-direction: column;
+        align-items:LEFT;
+    }
+
+    .left-column, .right-column {
+        width: O;
+    }
+
     .profile-img {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
 }
