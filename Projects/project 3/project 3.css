@@ -123,7 +123,7 @@ nav a:hover {
 
 /* Grande imagem central */
 .carousel .large-img {
-  width: 400px;    /* Tamaño grande */
+  width: 300px;    /* Tamaño grande */
   height: auto;
   z-index: 2;      
   box-shadow: 0 4px 15px rgba(255, 3, 217, 0.5);
@@ -131,7 +131,7 @@ nav a:hover {
 
 /* Pequenas imagens nas laterais*/
 .carousel .small-img {
-  width: 400px;    
+  width: 300px;    
   height: auto;
   cursor: pointer;
   filter: brightness(0.85);
