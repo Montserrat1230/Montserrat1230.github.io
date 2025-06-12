@@ -76,7 +76,7 @@ a {
 
 a:hover {
   color: #ff03d9;         /* Color cuando pasas el mouse por encima */
-  text-decoration: underline; /* (Opcional) subrayado al pasar el mouse */
+  
 }
 
 /* ========== Columna Izquierda ========== */
