@@ -69,6 +69,16 @@ nav a:hover {
     gap: 60px;
 }
 
+a {
+  color: #ff03d9;         /* Cambia el color del enlace */
+  text-decoration: none;  /* Quita el subrayado */
+}
+
+a:hover {
+  color: #ff03d9;         /* Color cuando pasas el mouse por encima */
+  text-decoration: underline; /* (Opcional) subrayado al pasar el mouse */
+}
+
 /* ========== Columna Izquierda ========== */
 .left-column {
     flex: 1;
